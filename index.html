@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherSnap</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <label for="city-input">City name</label>
+            <input type="text" id="city-input" placeholder="Enter city name..." autocomplete="off">
+            <button id="location-btn" title="Get current location">📍 Current Location</button>
+            <button id="theme-toggle">🌓 Dark Mode</button>
+        </header>
+
+        <div id="history-container">
+            <h3>Search History</h3>
+            <div id="history-list"></div>
+            <button id="clear-history">Clear History</button>
+        </div>
+
+        <main id="weather-container" aria-live="polite">
+            <div id="error-message" class="hidden" role="alert" aria-atomic="true"> 
+                City not found. please try again
+            </div>
+
+            <div class="hidden" id="loading">Loading weather data...</div>
+
+            <div class="hidden" id="weather-card" role="region" aria-label="Current weather">
+                <h1 id="city-name"> Tokyo, JP</h1>
+                <img src="" id="weather-icon" alt="Weather icon">
+                <h2 id="temperature">23&#xb0;C</h2>
+                <p id="description">Sunny</p>
+            </div>
+
+            <div class="details">
+                <p><strong>💧 Humidity</strong> <span id="humidity">45%</span></p>
+                <p><strong>💨 Wind</strong> <span id="wind">5.6 km/h</span></p>
+            </div>
+
+            <div id="forecast">
+                <h3>5-Day Forecast</h3>
+                <div id="forecast-cards"></div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
