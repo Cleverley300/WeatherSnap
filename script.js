@@ -1,6 +1,6 @@
 // openweatherMap API
 
-const API_KEY = "2f5823e26b5d20d97e94901090a08210";
+const API_KEY = "YOUR_API_KEY_HERE";
 
 const cityInput = document.getElementById("city-input");
 const locationBtn = document.getElementById("location-btn");
@@ -213,6 +213,7 @@ let history = JSON.parse(localStorage.getItem("weatherHistory")) || [];
 if (history.length === 0) {
     fetchWeather("Tokyo");  // default when  first using app
 }
+
 
 
 
